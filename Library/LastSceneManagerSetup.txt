@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/LeapMotionModules/DetectionExamples/Scenes/PinchDrawDemo.unity
+  isLoaded: 1
+  isActive: 1
