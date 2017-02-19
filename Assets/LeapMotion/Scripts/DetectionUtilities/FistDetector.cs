@@ -101,10 +101,8 @@ namespace Leap.Unity {
         } else {
           Hand hand = _handModel.GetLeapHand();
           if (hand != null) {
-            Finger thumb = hand.Fingers[0];
-            Finger index = hand.Fingers[1];
             centerColor = Color.red;
-            centerPosition = ((thumb.Bone(Bone.BoneType.TYPE_DISTAL).NextJoint + index.Bone(Bone.BoneType.TYPE_DISTAL).NextJoint) / 2).ToVector3();
+            centerPosition = hand.PalmPosition.ToVector3();
             circleRotation = hand.Basis.CalculateRotation();
           }
         }
